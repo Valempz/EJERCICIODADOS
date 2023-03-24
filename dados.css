@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,700); /*Esto es para importar fuentes*/
+body{
+	margin: 0; /*Esto establece el margen exterior del elemento, lo que hace es que no habra espacio en blanco entre el borde del elemento y el borde del contenedor*/
+	padding: 0;/* Aqui establece el espacio del relleno interior del elemento, y lo que hace es que no habra espacio en blanco entre el borde del elemnto y su contenido*/
+	font-family: 'Roboto', sans-serif; /*Aqui escogemos las fuentes, en este caso fue utilizada una fuente sans-serif de google*/
+	background: #333;/*Esto establece el color de fondo del elemento*/
+	color: #e8e1e1;/*Y este el color de texto*/
+}
+header {
+	padding: 20px; /*aqui lo que esta haciendo es que establece un espacio de relleno de 20 pixeles en el interior del contenedor*/
+}
+h1{
+	font-weight: 700;/*Esto establece el grosor de la fuente del texto*/
+	text-transform: uppercase;/*Esta propiedad se utiliza para tranformar el texto del elemento en mayusculas*/
+}
+p{
+	font-weight: 300;/*Esto establece el grosor de la fuente del texto*/
+}
+a {
+	color: gray;/* el color de texto*/
+}
+section {
+	display: flex;/* el display flex se usa para crear contenedores flexibles en los que se pueden ajustar automaticamente su tamaño, tanto el orden, y la alineacion.*/
+	justify-content: center; /* aqui lo que esta haciendo es que esta colocando todos los contenedores en el centro de la pagina*/
+	flex-wrap: wrap; /*si lo tengo entendido esta propiedad lo que hace es que si el ancho del contenedor no es suficiente para  mostrar todos los elementos flexibles en una sola linea los elementos se enrollaran a la siguiente linea, por lo que veo esto sucede es cuando la pagina minimiza su tamaño*/
+}
+[class^="cara-"]{
+	display: flex;/* el display flex se usa para crear contenedores flexibles en los que se pueden ajustar automaticamente su tamaño, tanto el orden, y la alineacion.*/
+	margin: 1em; /*Establece que el margen de los cuatro lados del dado sera de 1em, y el em se refiere que la margen se ajustara automaticamente segun el tamaño de la fuente*/
+	width: 150px; /*Establece el ancho del dado en 150 píxeles*/
+	height: 150px; /* Establece la altura del dado en 150 píxeles */
+	padding: 15px;/* Establece un espacio de relleno de 15 píxeles en cada uno de los cuatro lados del dado*/
+	background: #FEFEF6;/*Establece el color de fondo del dado*/
+	border-radius: 10%;/*Lo que hace esta propiedad es redondiar los bordes de un elemento en este caso establece un rado de borde del 10% para el elemento*/
+}
+.cara-uno{
+	justify-content: center;  /* Ubicar el circulo de manera horizonal del dado en el centro*/
+	align-items: center; /* Ubicar el circulo de manera vertical del dado en el centro*/
+}
+.cara-dos{
+	justify-content: space-between; /*Lo que hace es que , muestra la misma distancia entre ellos*/
+}
+.cara-dos .punto:nth-child(2){
+	align-self: flex-end; /* lo que hace esta propiedad es que alinea verticalmente el circulo en la parte inferior del contenedor */
+}
+.cara-tres{
+	justify-content: space-between; /*Lo que hace es que , muestra la misma distancia entre ellos*/
+}
+.cara-tres .punto:nth-child(2){
+	align-self: center; /* se utiliza para alinear verticalmente un elemento dentro de su contenedor en el eje vertical, osea que el punto 2 estaria verticalmente ubicado en el centro*/
+}
+.cara-tres .punto:nth-child(3){
+	align-self: flex-end; /* el tercer punto estara ubicado verticalmente en el inferior del contenedor*/
+}
+.cara-cuatro{
+	justify-content: space-between; /*Lo que hace es que , muestra la misma distancia entre ellos*/
+}
+.cara-cuatro .columna {
+	display: flex; /* el display flex se usa para crear contenedores flexibles en los que se pueden ajustar automaticamente su tamaño, tanto el orden, y la alineacion.*/
+	flex-direction: column;/*Lo que hace es que los puntos se colocan uno encima del otro, en una columna vertical*/
+	justify-content: space-between;/*Lo que hace es que , muestra la misma distancia entre ellos*/
+}
+.cara-cinco{
+	display: flex;/* el display flex se usa para crear contenedores flexibles en los que se pueden ajustar automaticamente su tamaño, tanto el orden, y la alineacion.*/
+	justify-content: space-between;/*Lo que hace es que , muestra la misma distancia entre ellos*/
+}
+.cara-cinco .columna {
+	display: flex; /* el display flex se usa para crear contenedores flexibles en los que se pueden ajustar automaticamente su tamaño, tanto el orden, y la alineacion.*/
+	flex-direction: column; /*Lo que hace es que los puntos se colocan uno encima del otro, en una columna vertical*/
+	justify-content: space-between;/*Lo que hace es que , muestra la misma distancia entre ellos*/
+}
+.cara-cinco .medio{
+	align-self: center; /* se utiliza para alinear verticalmente un elemento dentro de su contenedor en el eje vertical, osea que el punto del centro estaria verticalmente ubicado en el centro*/
+}
+.cara-seis{
+	display: flex; /* el display flex se usa para crear contenedores flexibles en los que se pueden ajustar automaticamente su tamaño, tanto el orden, y la alineacion.*/
+	justify-content: space-between; /*Lo que hace es que , muestra la misma distancia entre ellos*/
+}
+.cara-seis .columna{
+	display: flex; /* el display flex se usa para crear contenedores flexibles en los que se pueden ajustar automaticamente su tamaño, tanto el orden, y la alineacion.*/
+	flex-direction: column; /*Lo que hace es que los puntos se colocan uno encima del otro, en una columna vertical*/
+	justify-content: space-between;/*Lo que hace es que , muestra la misma distancia entre ellos*/
+}
+.punto {
+	width: 30px;/*Establece el ancho del punto del dado en 30 píxeles*/
+	height: 30px;/*Establece el alto del punto del dado en 30 píxeles*/
+	border-radius: 50%;/* Establece un radio de borde del 50% para el punto del dado, lo que lo hace circular*/
+	background: black;/*El Punto sera de color negro*/
+	box-shadow: inset 0 3px #111, inset 0 -3px #555; /*box-shadow lo que hace es agregar una sombra al punto, inset se usa para que la sombra aparezca dentro del punto.inset 0 3px #111 lo que hace este es que la sombra negra sera mas ocura en la parte inferior del punto y inset 0 -3px #555 es que la sombra sera mas clara en la parte superior del punto  */
+}
